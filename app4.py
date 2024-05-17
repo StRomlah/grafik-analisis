@@ -55,7 +55,7 @@ def create_chart(dataframe, chart_type, x_col, y_col, color_theme, year=None):
             title="Bar Chart",
             xaxis_title=x_col,
             yaxis_title=y_col,
-            #template='plotly_white',
+            template='plotly_white',
             font=dict(color='black')
         )
         return fig
