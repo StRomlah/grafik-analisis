@@ -131,6 +131,8 @@ def create_chart(dataframe, chart_type, x_col, y_col, color_theme, year=None):
         return fig
     else:
         return None
+# Menentukan tema warna yang akan digunakan
+color_theme = ['#636EFA']
 
 # Fungsi untuk membuat grafik waterfall
 def create_waterfall(data, year, profit_type):
