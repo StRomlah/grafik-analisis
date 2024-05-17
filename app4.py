@@ -50,7 +50,11 @@ def load_data(file_path):
 # Fungsi untuk membuat grafik berdasarkan pilihan pengguna
 def create_chart(dataframe, chart_type, x_col, y_col, color_theme, year=None):
     if chart_type == 'Bar Chart':
-        fig = px.bar(dataframe, x=x_col, y=y_col, color_discrete_sequence=color_theme)#, color_discrete_sequence=color_theme)
+        uniform_color = ['#1f77b4']  # Semua bar akan berwarna biru
+        
+        # Contoh warna yang berbeda untuk setiap bar
+        different_colors = ['#1f77b4', '#ff7f0e', '#2ca02c', '#d62728']
+        fig = px.bar(dataframe, x=x_col, y=y_col, color_discrete_sequence=uniform_color)#, color_discrete_sequence=color_theme)
         fig.update_layout(
             title="Bar Chart",
             xaxis_title=x_col,
