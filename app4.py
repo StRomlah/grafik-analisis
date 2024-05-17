@@ -132,7 +132,7 @@ def create_chart(dataframe, chart_type, x_col, y_col, color_theme, year=None):
     else:
         return None
 # Menentukan tema warna yang akan digunakan
-color_theme = ['#636EFA']
+color_theme = ['#1f77b4', '#ff7f0e', '#2ca02c', '#d62728', '#9467bd', '#8c564b']
 
 # Fungsi untuk membuat grafik waterfall
 def create_waterfall(data, year, profit_type):
@@ -216,8 +216,7 @@ if dataframe is not None:
     if chart_type == 'Waterfall Chart' and 'Order Year' in dataframe.columns:
         year = st.selectbox('Pilih Tahun', dataframe['Order Year'].unique(), key="year")
 
-    # Define color theme
-    color_theme = px.colors.qualitative.Dark24
+
 
     # Create and display chart
     if st.button('Buat Grafik', key="create_chart"):
