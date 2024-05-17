@@ -35,7 +35,7 @@ def generate_narrative(prompt):
     return response.choices[0].message.content
 
 # Title
-st.title("Chart and Insight Generator")
+st.title("Konversi Informasi Penting dalam Chart Menjadi Narasi")
 
 # Fungsi untuk memuat data
 def load_data(file_path):
