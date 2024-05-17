@@ -48,7 +48,7 @@ def load_data(file_path):
         return None
 
 # Fungsi untuk membuat grafik berdasarkan pilihan pengguna
-def create_chart(dataframe, chart_type, x_col, y_col, color_theme, year=None):
+def create_chart(dataframe, chart_type, x_col, y_col)#, color_theme, year=None):
     if chart_type == 'Bar Chart':
         uniform_color = ['#1f77b4']  # Semua bar akan berwarna biru
         
