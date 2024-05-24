@@ -171,7 +171,7 @@ st.markdown("""
 """, unsafe_allow_html=True)
 
 # URL animasi Lottie
-lottie_animation_url = "https://assets9.lottiefiles.com/packages/lf20_jcikwtux.json"
+lottie_animation_url = "https://lottie.host/40eb321b-edf1-42f0-b982-a0c33c23b9ec/TbobicdLp3.json"
 lottie_animation = load_lottieurl(lottie_animation_url)
 
 # Judul aplikasi
