@@ -182,7 +182,7 @@ if lottie_animation:
     st_lottie(lottie_animation, height=150, key="animation")
 
 # Bagian sidebar untuk upload file
-st.sidebar.title("Upload Data")
+st.sidebar.title("Upload File Anda Disini")
 uploaded_file = st.sidebar.file_uploader("Pilih File", type=["csv", "xls", "xlsx", "json"])
 
 # Jika tidak ada file yang diunggah, tampilkan pesan di sidebar
@@ -198,8 +198,8 @@ if df is not None:
 
     # Sidebar untuk pengaturan grafik
     st.sidebar.title("Pengaturan Grafik")
-    x_col = st.sidebar.selectbox("Grafik Kolom X", df.columns)
-    y_col = st.sidebar.selectbox("Grafik Kolom Y", df.columns)
+    x_col = st.sidebar.selectbox("Masukkan Kolom (Sumbu X)", df.columns)
+    y_col = st.sidebar.selectbox("Masukkan Baris (Sumbu Y)", df.columns)
     chart_type = st.sidebar.selectbox(
         "Pilih Tipe Chart:",
         options=["Line Chart", "Bar Chart", "Pie Chart", "Scatter Plot", "Area Chart", "Stacked Bar Chart", "Waterfall Chart", "Bubble Chart", "Tree Map", "Gauge Chart"]
