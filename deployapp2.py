@@ -175,7 +175,7 @@ lottie_animation_url = "https://lottie.host/40eb321b-edf1-42f0-b982-a0c33c23b9ec
 lottie_animation = load_lottieurl(lottie_animation_url)
 
 # Judul aplikasi
-st.markdown('<div class="main-header">Mengkonversi Insight dalam Chart Menjadi Narasi</div>', unsafe_allow_html=True)
+st.markdown('<div class="main-header">Mengubah Insight Dalam Grafik Menjadi Sebuah Narasi</div>', unsafe_allow_html=True)
 
 # Menampilkan animasi Lottie di bawah judul
 if lottie_animation:
@@ -193,7 +193,7 @@ df = load_file(uploaded_file)
 
 if df is not None:
     # Tampilkan data
-    st.markdown('<div class="main-subheader">Data Preview</div>', unsafe_allow_html=True)
+    st.markdown('<div class="main-subheader">Tampilan Data</div>', unsafe_allow_html=True)
     st.write(df.head())
 
     # Sidebar untuk pengaturan grafik
@@ -213,7 +213,7 @@ if df is not None:
             st.session_state['fig'] = fig
 
     if 'fig' in st.session_state:
-        st.markdown('<div class="main-subheader">Generated Chart</div>', unsafe_allow_html=True)
+        st.markdown('<div class="main-subheader">Tampilkan Grafik</div>', unsafe_allow_html=True)
         fig = st.session_state['fig']
         if isinstance(fig, go.Figure):
             st.plotly_chart(fig)
@@ -221,7 +221,7 @@ if df is not None:
             st.pyplot(fig)
 
     # Input teks untuk prompt pengguna
-    st.markdown('<div class="main-subheader">Generate Narrative</div>', unsafe_allow_html=True)
+    st.markdown('<div class="main-subheader">Tampilkan Narasi</div>', unsafe_allow_html=True)
     user_prompt_content = st.text_area("Masukkan prompt untuk AI:", "")
 
     # Tombol hasilkan insight dengan style custom
