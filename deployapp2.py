@@ -250,4 +250,4 @@ else:
     pass
 
 # Footer aplikasi
-st.markdown('<div class="main-footer">Developed by [Group 6] - © 2024</div>', unsafe_allow_html=True)
+st.markdown('<div class="main-footer">Developed by [Group 6 - Tetris] - © 2024</div>', unsafe_allow_html=True)
