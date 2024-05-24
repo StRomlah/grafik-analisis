@@ -198,8 +198,8 @@ if df is not None:
 
     # Sidebar untuk pengaturan grafik
     st.sidebar.title("Pengaturan Grafik")
-    x_col = st.sidebar.selectbox("Pilih kolom untuk nilai saat ini", df.columns)
-    y_col = st.sidebar.selectbox("Pilih kolom untuk nilai referensi", df.columns)
+    x_col = st.sidebar.selectbox("Grafik Kolom X", df.columns)
+    y_col = st.sidebar.selectbox("Grafik Kolom Y", df.columns)
     chart_type = st.sidebar.selectbox(
         "Pilih Tipe Chart:",
         options=["Line Chart", "Bar Chart", "Pie Chart", "Scatter Plot", "Area Chart", "Stacked Bar Chart", "Waterfall Chart", "Bubble Chart", "Tree Map", "Gauge Chart"]
@@ -233,8 +233,7 @@ if df is not None:
                 variable_B = df[y_col].tolist()
                 system_prompt = f'''
                 Kamu adalah storyteller AI yang bertugas untuk menganalisis dan menginterpretasikan visualisasi data. 
-                Data yang akan kamu analisis memiliki kolom {x_col} sebagai sumbu x dan {y_col} sebagai sumbu y, 
-                direpresentasikan dalam format JSON sebagai {{'X': {variable_A}, 'Y': {variable_B}}}.
+                Data yang akan kamu analisis memiliki kolom {x_col} sebagai sumbu x dan {y_col} sebagai sumbu y. 
                 Grafik yang digunakan untuk visualisasi adalah "{chart_type}". Tugas kamu adalah untuk mengubah informasi kompleks dari grafik 
                 menjadi narasi yang jelas dan mudah dipahami, seperti yang ditemukan dalam infografis, sehingga dapat dengan mudah 
                 dipahami oleh orang yang tidak memiliki latar belakang teknis.
