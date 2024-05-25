@@ -129,24 +129,14 @@ st.markdown("""
         .main-subheader {
             font-size: 1.5em;
             font-weight: bold;
-            color: #333333;
+            color: #2E86C1;
             margin-top: 20px;
             margin-bottom: 10px;
         }
-        .main-footer {
-            font-size: 0.9em;
-            color: #AAAAAA;
-            text-align: center;
-            margin-top: 20px;
-        }
-        .sidebar .sidebar-content {
-            background-color: #F0F2F6;
-            padding: 10px;
-            border-radius: 5px;
-        }
         .narrative-container {
-            background-color: #F9F9F9;
-            border: 1px solid #E0E0E0;
+            background-color: #333;
+            color: #FFF;
+            border: 1px solid #444;
             border-radius: 5px;
             padding: 15px;
             margin-top: 10px;
@@ -166,6 +156,14 @@ st.markdown("""
         }
         .custom-button:hover {
             background-color: #1F618D;
+        }
+        .stTextInput>div>input {
+            color: #FFF;
+            background-color: #444;
+        }
+        .stTextInput>div>textarea {
+            color: #FFF;
+            background-color: #444;
         }
     </style>
 """, unsafe_allow_html=True)
