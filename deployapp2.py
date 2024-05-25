@@ -134,12 +134,18 @@ st.markdown("""
             margin-bottom: 10px;
         }
         .narrative-container {
-            background-color: #333;
-            color: #FFF;
             border: 1px solid #444;
             border-radius: 5px;
             padding: 15px;
             margin-top: 10px;
+        }
+        body[data-theme='dark'] .narrative-container {
+            background-color: #333;
+            color: #FFF;
+        }
+        body[data-theme='light'] .narrative-container {
+            background-color: #F9F9F9;
+            color: #000;
         }
         .custom-button {
             display: inline-block;
@@ -164,6 +170,22 @@ st.markdown("""
         .stTextInput>div>textarea {
             color: #FFF;
             background-color: #444;
+        }
+        body[data-theme='light'] .stTextInput>div>input,
+        body[data-theme='light'] .stTextInput>div>textarea {
+            color: #000;
+            background-color: #FFF;
+        }
+        .main-footer {
+            font-size: 0.9em;
+            color: #AAAAAA;
+            text-align: center;
+            margin-top: 20px;
+        }
+        .footer-center {
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
     </style>
 """, unsafe_allow_html=True)
@@ -247,4 +269,4 @@ else:
     pass
 
 # Footer aplikasi
-st.markdown('<div class="main-footer">Developed by [Group 6 - Tetris] - © 2024</div>', unsafe_allow_html=True)
+st.markdown('<div class="footer-center"><div class="main-footer">Developed by [Group 6 - Tetris] - © 2024</div></div>', unsafe_allow_html=True)
